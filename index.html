@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Thetz</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
@@ -13,77 +12,63 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Poppins,sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 body{
 background:#000;
-background-image:
-radial-gradient(circle at top,#333 0%,#000 70%);
+background-image:radial-gradient(circle at top,#2e2e2e 0%,#000 75%);
 color:#fff;
 display:flex;
 justify-content:center;
-padding:25px;
+padding:30px 15px;
 }
 
 .container{
 width:100%;
-max-width:480px;
+max-width:500px;
 }
 
-.card{
-background:#111;
-border:1px solid #2c2c2c;
-border-radius:22px;
-padding:18px;
-margin-bottom:18px;
+.card,.big-card{
 display:flex;
 align-items:center;
 gap:15px;
+background:#111;
+border:1px solid #222;
+border-radius:20px;
+padding:18px;
+margin-bottom:18px;
 text-decoration:none;
 color:#fff;
-transition:.25s;
+transition:.3s;
 }
 
-.card:hover{
-transform:scale(1.03);
-background:#1a1a1a;
+.card:hover,.big-card:hover{
+transform:translateY(-4px);
 border-color:#fff;
+box-shadow:0 0 20px rgba(255,255,255,.15);
 }
 
 .card img{
-width:68px;
-height:68px;
+width:70px;
+height:70px;
 border-radius:50%;
 object-fit:cover;
 }
 
 .info h2{
-font-size:20px;
-font-weight:700;
+font-size:22px;
 }
 
 .info p{
-color:#bcbcbc;
+color:#bdbdbd;
 font-size:14px;
 margin-top:3px;
 }
 
 .big-card{
 display:block;
-background:#111;
-border-radius:24px;
-padding:22px;
-text-decoration:none;
-color:#fff;
-margin-bottom:20px;
-transition:.25s;
-border:1px solid #2c2c2c;
-}
-
-.big-card:hover{
-transform:scale(1.02);
-border-color:#fff;
+text-align:center;
 }
 
 .big-card img{
@@ -94,20 +79,46 @@ margin-bottom:15px;
 
 .big-card h2{
 font-size:28px;
-margin-bottom:5px;
+margin-bottom:8px;
 }
 
 .big-card p{
-color:#aaa;
+color:#bdbdbd;
+}
+
+.social{
+display:flex;
+align-items:center;
+gap:15px;
+background:#111;
+border:1px solid #222;
+border-radius:20px;
+padding:16px;
+margin-bottom:18px;
+text-decoration:none;
+color:#fff;
+transition:.3s;
+}
+
+.social:hover{
+transform:translateY(-4px);
+border-color:#fff;
+box-shadow:0 0 20px rgba(255,255,255,.15);
+}
+
+.social img{
+width:55px;
+height:55px;
 }
 
 footer{
+margin-top:25px;
 text-align:right;
 font-size:12px;
-margin-top:20px;
 color:#777;
 }
 </style>
+
 </head>
 
 <body>
@@ -119,8 +130,8 @@ color:#777;
 <img src="https://cdn.discordapp.com/attachments/1531059796340641832/1533538902126760080/icon.png?ex=6a70dae6&is=6a6f8966&hm=61e46185d54aded420de18f066603ce68cc16e55f8c8844d306a85f483e39286&">
 
 <div class="info">
-<h2>Patrocinador</h2>
-<p>Discord Server • Join</p>
+<h2>Robux Barato</h2>
+<p>Best Prices Available</p>
 </div>
 
 </a>
@@ -130,26 +141,26 @@ color:#777;
 <img src="https://cdn.discordapp.com/attachments/1531059796340641832/1533602744936693952/file_0000000033c0820e9886a61bff6f42e6.png?ex=6a71165b&is=6a6fc4db&hm=f3343a2d7fc94b7104bf78da3b98c818bfb47bcae8bc579ea23c97920c906c8d&">
 
 <h2>Comunidade</h2>
-<p>Discord Server • Free to Join</p>
+<p>Join our Discord Community</p>
 
 </a>
 
-<a class="card" href="https://www.youtube.com/@thetz-n7n" target="_blank">
+<a class="social" href="https://www.youtube.com/@thetz-n7n" target="_blank">
 
 <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
 
-<div class="info">
+<div>
 <h2>YouTube</h2>
 <p>@thetz-n7n</p>
 </div>
 
 </a>
 
-<a class="card" href="https://www.tiktok.com/@thetz_8?_r=1&_t=ZS-98Yi92Fu7us" target="_blank">
+<a class="social" href="https://www.tiktok.com/@thetz_8?_r=1&_t=ZS-98Yi92Fu7us" target="_blank">
 
 <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png">
 
-<div class="info">
+<div>
 <h2>TikTok</h2>
 <p>@thetz_8</p>
 </div>
