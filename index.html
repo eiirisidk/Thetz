@@ -17,7 +17,7 @@ font-family:'Poppins',sans-serif;
 
 body{
 background:#000;
-background-image:radial-gradient(circle at top,#2e2e2e 0%,#000 75%);
+background-image:radial-gradient(circle at top,#2a2a2a 0%,#000 75%);
 color:#fff;
 display:flex;
 justify-content:center;
@@ -29,57 +29,69 @@ width:100%;
 max-width:500px;
 }
 
-.card,.big-card{
+.card{
 display:flex;
 align-items:center;
 gap:15px;
 background:#111;
-border:1px solid #222;
+border:1px solid #2a2a2a;
 border-radius:20px;
 padding:18px;
 margin-bottom:18px;
 text-decoration:none;
-color:#fff;
-transition:.3s;
+color:white;
+transition:.25s;
 }
 
-.card:hover,.big-card:hover{
+.card:hover{
 transform:translateY(-4px);
 border-color:#fff;
-box-shadow:0 0 20px rgba(255,255,255,.15);
 }
 
 .card img{
-width:70px;
-height:70px;
+width:68px;
+height:68px;
 border-radius:50%;
 object-fit:cover;
 }
 
 .info h2{
-font-size:22px;
+font-size:20px;
+font-weight:700;
 }
 
 .info p{
-color:#bdbdbd;
 font-size:14px;
+color:#bdbdbd;
 margin-top:3px;
 }
 
 .big-card{
 display:block;
-text-align:center;
+background:#111;
+border:1px solid #2a2a2a;
+border-radius:22px;
+padding:18px;
+margin-bottom:18px;
+text-decoration:none;
+color:white;
+transition:.25s;
+}
+
+.big-card:hover{
+transform:translateY(-4px);
+border-color:white;
 }
 
 .big-card img{
 width:100%;
-border-radius:18px;
+border-radius:16px;
 margin-bottom:15px;
 }
 
 .big-card h2{
 font-size:28px;
-margin-bottom:8px;
+margin-bottom:5px;
 }
 
 .big-card p{
@@ -91,34 +103,52 @@ display:flex;
 align-items:center;
 gap:15px;
 background:#111;
-border:1px solid #222;
+border:1px solid #2a2a2a;
 border-radius:20px;
-padding:16px;
+padding:18px;
 margin-bottom:18px;
 text-decoration:none;
-color:#fff;
-transition:.3s;
+color:white;
+transition:.25s;
 }
 
 .social:hover{
 transform:translateY(-4px);
-border-color:#fff;
-box-shadow:0 0 20px rgba(255,255,255,.15);
+border-color:white;
 }
 
 .social img{
-width:55px;
-height:55px;
+width:60px;
+height:60px;
+}
+
+.social h2{
+font-size:20px;
+}
+
+.social p{
+font-size:14px;
+color:#bdbdbd;
+margin-top:3px;
 }
 
 footer{
-margin-top:25px;
-text-align:right;
+margin-top:20px;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+gap:6px;
 font-size:12px;
 color:#777;
 }
-</style>
 
+footer img{
+width:18px;
+height:18px;
+border-radius:50%;
+object-fit:cover;
+}
+</style>
 </head>
 
 <body>
@@ -126,49 +156,38 @@ color:#777;
 <div class="container">
 
 <a class="card" href="https://discord.gg/7kEktfWFEv" target="_blank">
-
 <img src="https://cdn.discordapp.com/attachments/1531059796340641832/1533538902126760080/icon.png?ex=6a70dae6&is=6a6f8966&hm=61e46185d54aded420de18f066603ce68cc16e55f8c8844d306a85f483e39286&">
-
 <div class="info">
 <h2>Robux Barato</h2>
 <p>Best Prices Available</p>
 </div>
-
 </a>
 
 <a class="big-card" href="https://discord.gg/7kEktfWFEv" target="_blank">
-
 <img src="https://cdn.discordapp.com/attachments/1531059796340641832/1533602744936693952/file_0000000033c0820e9886a61bff6f42e6.png?ex=6a71165b&is=6a6fc4db&hm=f3343a2d7fc94b7104bf78da3b98c818bfb47bcae8bc579ea23c97920c906c8d&">
-
 <h2>Comunidade</h2>
 <p>Join our Discord Community</p>
-
 </a>
 
 <a class="social" href="https://www.youtube.com/@thetz-n7n" target="_blank">
-
 <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
-
 <div>
 <h2>YouTube</h2>
 <p>@thetz-n7n</p>
 </div>
-
 </a>
 
 <a class="social" href="https://www.tiktok.com/@thetz_8?_r=1&_t=ZS-98Yi92Fu7us" target="_blank">
-
 <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png">
-
 <div>
 <h2>TikTok</h2>
 <p>@thetz_8</p>
 </div>
-
 </a>
 
 <footer>
-Developed by Eiiris | vodka.idk
+<img src="https://cdn.discordapp.com/attachments/1482517813783695563/1533622183241449502/f976f65f4d12cd58d73a667e0fe50a27_1.jpg?ex=6a712875&is=6a6fd6f5&hm=d05090a5829a388eb3c9f82ea03763fcaac89c8cdf480ea7662f514993d48ca6&">
+<span>Developed by Eiiris | vodka.idk</span>
 </footer>
 
 </div>
