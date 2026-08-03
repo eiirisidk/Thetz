@@ -1,718 +1,196 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thetz</title>
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-    <meta
-        name="description"
-        content="Links oficiais da comunidade Thetz"
-    >
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
-    <title>Thetz</title>
+body{
+background:#000;
+background-image:radial-gradient(circle at top,#2a2a2a 0%,#000 75%);
+color:#fff;
+display:flex;
+justify-content:center;
+padding:30px 15px;
+}
 
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
+.container{
+width:100%;
+max-width:500px;
+}
 
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
+.card{
+display:flex;
+align-items:center;
+gap:15px;
+background:#111;
+border:1px solid #2a2a2a;
+border-radius:20px;
+padding:18px;
+margin-bottom:18px;
+text-decoration:none;
+color:white;
+transition:.25s;
+}
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
+.card:hover{
+transform:translateY(-4px);
+border-color:#fff;
+}
 
-    <style>
-        :root {
-            --background: #000000;
-            --card-background: rgba(17, 17, 17, 0.94);
-            --card-hover: rgba(28, 28, 28, 0.98);
-            --border: rgba(255, 255, 255, 0.12);
-            --border-hover: rgba(255, 255, 255, 0.65);
-            --text: #ffffff;
-            --secondary-text: #bdbdbd;
-            --footer-text: #777777;
-        }
+.card img{
+width:68px;
+height:68px;
+border-radius:50%;
+object-fit:cover;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+.info h2{
+font-size:20px;
+font-weight:700;
+}
 
-        html {
-            scroll-behavior: smooth;
-        }
+.info p{
+font-size:14px;
+color:#bdbdbd;
+margin-top:3px;
+}
 
-        body {
-            min-height: 100vh;
-            padding: 28px 15px;
-            display: flex;
-            justify-content: center;
-            color: var(--text);
-            font-family: "Poppins", sans-serif;
-            background:
-                radial-gradient(
-                    circle at top,
-                    rgba(255, 255, 255, 0.18) 0%,
-                    rgba(255, 255, 255, 0.04) 24%,
-                    transparent 52%
-                ),
-                linear-gradient(
-                    180deg,
-                    #181818 0%,
-                    #050505 35%,
-                    #000000 100%
-                );
-            background-attachment: fixed;
-        }
+.big-card{
+display:block;
+background:#111;
+border:1px solid #2a2a2a;
+border-radius:22px;
+padding:18px;
+margin-bottom:18px;
+text-decoration:none;
+color:white;
+transition:.25s;
+}
 
-        body::before {
-            content: "";
-            position: fixed;
-            inset: 0;
-            pointer-events: none;
-            opacity: 0.22;
-            background-image:
-                linear-gradient(
-                    rgba(255, 255, 255, 0.025) 1px,
-                    transparent 1px
-                ),
-                linear-gradient(
-                    90deg,
-                    rgba(255, 255, 255, 0.025) 1px,
-                    transparent 1px
-                );
-            background-size: 32px 32px;
-        }
+.big-card:hover{
+transform:translateY(-4px);
+border-color:white;
+}
 
-        .container {
-            position: relative;
-            z-index: 1;
-            width: 100%;
-            max-width: 500px;
-        }
+.big-card img{
+width:100%;
+border-radius:16px;
+margin-bottom:15px;
+}
 
-        .site-header {
-            margin-bottom: 20px;
-            padding: 5px 4px;
-            text-align: center;
-        }
+.big-card h2{
+font-size:28px;
+margin-bottom:5px;
+}
 
-        .site-header h1 {
-            font-size: 30px;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
+.big-card p{
+color:#bdbdbd;
+}
 
-        .site-header p {
-            margin-top: 3px;
-            color: var(--secondary-text);
-            font-size: 13px;
-            font-weight: 400;
-        }
+.social{
+display:flex;
+align-items:center;
+gap:15px;
+background:#111;
+border:1px solid #2a2a2a;
+border-radius:20px;
+padding:18px;
+margin-bottom:18px;
+text-decoration:none;
+color:white;
+transition:.25s;
+}
 
-        .card,
-        .social-card,
-        .big-card {
-            position: relative;
-            overflow: hidden;
-            color: var(--text);
-            text-decoration: none;
-            background: var(--card-background);
-            border: 1px solid var(--border);
-            box-shadow:
-                0 12px 30px rgba(0, 0, 0, 0.35),
-                inset 0 1px 0 rgba(255, 255, 255, 0.035);
-            transition:
-                transform 0.25s ease,
-                border-color 0.25s ease,
-                background 0.25s ease,
-                box-shadow 0.25s ease;
-            -webkit-tap-highlight-color: transparent;
-        }
+.social:hover{
+transform:translateY(-4px);
+border-color:white;
+}
 
-        .card::before,
-        .social-card::before,
-        .big-card::before {
-            content: "";
-            position: absolute;
-            top: -120%;
-            left: -45%;
-            width: 45%;
-            height: 300%;
-            opacity: 0;
-            transform: rotate(25deg);
-            background: linear-gradient(
-                90deg,
-                transparent,
-                rgba(255, 255, 255, 0.12),
-                transparent
-            );
-            transition:
-                left 0.55s ease,
-                opacity 0.55s ease;
-        }
+.social img{
+width:60px;
+height:60px;
+}
 
-        .card:hover::before,
-        .social-card:hover::before,
-        .big-card:hover::before {
-            left: 120%;
-            opacity: 1;
-        }
+.social h2{
+font-size:20px;
+}
 
-        .card:hover,
-        .social-card:hover,
-        .big-card:hover {
-            transform: translateY(-4px);
-            border-color: var(--border-hover);
-            background: var(--card-hover);
-            box-shadow:
-                0 18px 38px rgba(0, 0, 0, 0.52),
-                0 0 22px rgba(255, 255, 255, 0.07);
-        }
+.social p{
+font-size:14px;
+color:#bdbdbd;
+margin-top:3px;
+}
 
-        .card:active,
-        .social-card:active,
-        .big-card:active {
-            transform: scale(0.985);
-        }
+footer{
+margin-top:20px;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+gap:6px;
+font-size:12px;
+color:#777;
+}
 
-        .card {
-            min-height: 106px;
-            margin-bottom: 18px;
-            padding: 18px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            border-radius: 22px;
-        }
-
-        .card-logo {
-            flex: 0 0 auto;
-            width: 68px;
-            height: 68px;
-            border-radius: 50%;
-            object-fit: cover;
-            background: #ffffff;
-            border: 2px solid rgba(255, 255, 255, 0.12);
-        }
-
-        .card-content,
-        .social-content {
-            min-width: 0;
-            flex: 1;
-        }
-
-        .card-content h2,
-        .social-content h2 {
-            font-size: 20px;
-            line-height: 1.25;
-            font-weight: 700;
-        }
-
-        .card-content p,
-        .social-content p {
-            margin-top: 3px;
-            color: var(--secondary-text);
-            font-size: 14px;
-            line-height: 1.45;
-            font-weight: 400;
-        }
-
-        .arrow {
-            flex: 0 0 auto;
-            margin-left: auto;
-            color: #999999;
-            font-size: 22px;
-            font-weight: 300;
-            transition:
-                transform 0.25s ease,
-                color 0.25s ease;
-        }
-
-        .card:hover .arrow,
-        .social-card:hover .arrow {
-            color: #ffffff;
-            transform: translateX(4px);
-        }
-
-        .big-card {
-            display: block;
-            margin-bottom: 18px;
-            padding: 18px;
-            border-radius: 24px;
-        }
-
-        .community-image-wrapper {
-            position: relative;
-            width: 100%;
-            margin-bottom: 15px;
-            overflow: hidden;
-            border-radius: 18px;
-            background: #0a0a0a;
-            aspect-ratio: 1 / 1;
-        }
-
-        .community-image {
-            width: 100%;
-            height: 100%;
-            display: block;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-
-        .big-card:hover .community-image {
-            transform: scale(1.035);
-        }
-
-        .community-overlay {
-            position: absolute;
-            inset: auto 0 0;
-            height: 42%;
-            background: linear-gradient(
-                transparent,
-                rgba(0, 0, 0, 0.82)
-            );
-        }
-
-        .community-status {
-            position: absolute;
-            right: 12px;
-            bottom: 12px;
-            padding: 7px 11px;
-            display: flex;
-            align-items: center;
-            gap: 7px;
-            color: #ffffff;
-            font-size: 11px;
-            font-weight: 600;
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            border-radius: 999px;
-            background: rgba(0, 0, 0, 0.68);
-            backdrop-filter: blur(8px);
-        }
-
-        .status-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #ffffff;
-            box-shadow: 0 0 9px rgba(255, 255, 255, 0.75);
-            animation: pulse 1.8s infinite;
-        }
-
-        @keyframes pulse {
-            0%,
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-
-            50% {
-                opacity: 0.48;
-                transform: scale(0.75);
-            }
-        }
-
-        .big-card h2 {
-            font-size: 28px;
-            line-height: 1.25;
-            font-weight: 700;
-        }
-
-        .member-count {
-            min-height: 22px;
-            margin-top: 5px;
-            color: var(--secondary-text);
-            font-size: 14px;
-            line-height: 1.45;
-        }
-
-        .member-count.loading {
-            animation: textPulse 1.4s ease-in-out infinite;
-        }
-
-        @keyframes textPulse {
-            0%,
-            100% {
-                opacity: 0.55;
-            }
-
-            50% {
-                opacity: 1;
-            }
-        }
-
-        .community-action {
-            margin-top: 14px;
-            padding-top: 13px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            color: #e2e2e2;
-            font-size: 13px;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .community-action span:last-child {
-            font-size: 20px;
-            transition: transform 0.25s ease;
-        }
-
-        .big-card:hover .community-action span:last-child {
-            transform: translateX(4px);
-        }
-
-        .social-card {
-            min-height: 96px;
-            margin-bottom: 18px;
-            padding: 18px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            border-radius: 22px;
-        }
-
-        .social-logo-wrapper {
-            flex: 0 0 auto;
-            width: 60px;
-            height: 60px;
-            display: grid;
-            place-items: center;
-            overflow: hidden;
-            border-radius: 50%;
-            background: #ffffff;
-        }
-
-        .social-logo {
-            width: 42px;
-            height: 42px;
-            object-fit: contain;
-        }
-
-        footer {
-            margin-top: 24px;
-            padding: 10px 4px 2px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            gap: 7px;
-            color: var(--footer-text);
-            font-size: 12px;
-            line-height: 1;
-            font-weight: 400;
-        }
-
-        footer img {
-            width: 20px;
-            height: 20px;
-            flex: 0 0 auto;
-            object-fit: cover;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 50%;
-        }
-
-        footer span {
-            white-space: nowrap;
-        }
-
-        @media (max-width: 420px) {
-            body {
-                padding: 22px 12px;
-            }
-
-            .site-header h1 {
-                font-size: 27px;
-            }
-
-            .card,
-            .social-card {
-                padding: 16px;
-                gap: 13px;
-            }
-
-            .card-logo {
-                width: 62px;
-                height: 62px;
-            }
-
-            .social-logo-wrapper {
-                width: 56px;
-                height: 56px;
-            }
-
-            .social-logo {
-                width: 39px;
-                height: 39px;
-            }
-
-            .card-content h2,
-            .social-content h2 {
-                font-size: 19px;
-            }
-
-            .big-card {
-                padding: 16px;
-            }
-
-            .big-card h2 {
-                font-size: 25px;
-            }
-
-            footer {
-                font-size: 11px;
-            }
-
-            footer img {
-                width: 18px;
-                height: 18px;
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            *,
-            *::before,
-            *::after {
-                scroll-behavior: auto !important;
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
-    </style>
+footer img{
+width:18px;
+height:18px;
+border-radius:50%;
+object-fit:cover;
+}
+</style>
 </head>
 
 <body>
-    <main class="container">
 
-        <header class="site-header">
-            <h1>Thetz</h1>
-            <p>Official links</p>
-        </header>
+<div class="container">
 
-        <!-- ROBUX BARATO -->
-        <a
-            class="card"
-            href="https://discord.gg/7kEktfWFEv"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Entrar no servidor de Robux Barato"
-        >
-            <img
-                class="card-logo"
-                src="https://cdn.discordapp.com/attachments/1531059796340641832/1533538902126760080/icon.png?ex=6a70dae6&amp;is=6a6f8966&amp;hm=61e46185d54aded420de18f066603ce68cc16e55f8c8844d306a85f483e39286&amp;"
-                alt="Logo Robux Barato"
-                loading="lazy"
-            >
+<a class="card" href="https://discord.gg/7kEktfWFEv" target="_blank">
+<img src="https://cdn.discordapp.com/attachments/1531059796340641832/1533538902126760080/icon.png?ex=6a70dae6&is=6a6f8966&hm=61e46185d54aded420de18f066603ce68cc16e55f8c8844d306a85f483e39286&">
+<div class="info">
+<h2>Robux Barato</h2>
+<p>Best Prices Available</p>
+</div>
+</a>
 
-            <div class="card-content">
-                <h2>Robux Barato</h2>
-                <p>Best Prices Available</p>
-            </div>
+<a class="big-card" href="https://discord.gg/7kEktfWFEv" target="_blank">
+<img src="https://cdn.discordapp.com/attachments/1531059796340641832/1533602744936693952/file_0000000033c0820e9886a61bff6f42e6.png?ex=6a71165b&is=6a6fc4db&hm=f3343a2d7fc94b7104bf78da3b98c818bfb47bcae8bc579ea23c97920c906c8d&">
+<h2>Comunidade</h2>
+<p>Join our Discord Community</p>
+</a>
 
-            <span class="arrow" aria-hidden="true">›</span>
-        </a>
+<a class="social" href="https://www.youtube.com/@thetz-n7n" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
+<div>
+<h2>YouTube</h2>
+<p>@thetz-n7n</p>
+</div>
+</a>
 
-        <!-- COMUNIDADE -->
-        <a
-            class="big-card"
-            href="https://discord.gg/7kEktfWFEv"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Entrar na comunidade Thetz no Discord"
-        >
-            <div class="community-image-wrapper">
-                <img
-                    class="community-image"
-                    src="https://cdn.discordapp.com/attachments/1531059796340641832/1533602744936693952/file_0000000033c0820e9886a61bff6f42e6.png?ex=6a71165b&amp;is=6a6fc4db&amp;hm=f3343a2d7fc94b7104bf78da3b98c818bfb47bcae8bc579ea23c97920c906c8d&amp;"
-                    alt="Logo da comunidade Thetz"
-                    loading="lazy"
-                >
+<a class="social" href="https://www.tiktok.com/@thetz_8?_r=1&_t=ZS-98Yi92Fu7us" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png">
+<div>
+<h2>TikTok</h2>
+<p>@thetz_8</p>
+</div>
+</a>
 
-                <div class="community-overlay"></div>
+<footer>
+<img src="https://cdn.discordapp.com/attachments/1482517813783695563/1533622183241449502/f976f65f4d12cd58d73a667e0fe50a27_1.jpg?ex=6a712875&is=6a6fd6f5&hm=d05090a5829a388eb3c9f82ea03763fcaac89c8cdf480ea7662f514993d48ca6&">
+<span>Developed by Eiiris | vodka.idk</span>
+</footer>
 
-                <div class="community-status">
-                    <span class="status-dot"></span>
-                    Discord
-                </div>
-            </div>
+</div>
 
-            <h2>Comunidade</h2>
-
-            <p
-                id="member-count"
-                class="member-count loading"
-                aria-live="polite"
-            >
-                Carregando quantidade de membros...
-            </p>
-
-            <div class="community-action">
-                <span>Join our Discord Community</span>
-                <span aria-hidden="true">›</span>
-            </div>
-        </a>
-
-        <!-- YOUTUBE -->
-        <a
-            class="social-card"
-            href="https://www.youtube.com/@thetz-n7n"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Abrir o canal Thetz no YouTube"
-        >
-            <div class="social-logo-wrapper">
-                <img
-                    class="social-logo"
-                    src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"
-                    alt="Logo do YouTube"
-                    loading="lazy"
-                >
-            </div>
-
-            <div class="social-content">
-                <h2>YouTube</h2>
-                <p>@thetz-n7n</p>
-            </div>
-
-            <span class="arrow" aria-hidden="true">›</span>
-        </a>
-
-        <!-- TIKTOK -->
-        <a
-            class="social-card"
-            href="https://www.tiktok.com/@thetz_8?_r=1&amp;_t=ZS-98Yi92Fu7us"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Abrir o perfil Thetz no TikTok"
-        >
-            <div class="social-logo-wrapper">
-                <img
-                    class="social-logo"
-                    src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png"
-                    alt="Logo do TikTok"
-                    loading="lazy"
-                >
-            </div>
-
-            <div class="social-content">
-                <h2>TikTok</h2>
-                <p>@thetz_8</p>
-            </div>
-
-            <span class="arrow" aria-hidden="true">›</span>
-        </a>
-
-        <!-- CRÉDITOS -->
-        <footer>
-            <img
-                src="https://cdn.discordapp.com/attachments/1482517813783695563/1533622183241449502/f976f65f4d12cd58d73a667e0fe50a27_1.jpg?ex=6a712875&amp;is=6a6fd6f5&amp;hm=d05090a5829a388eb3c9f82ea03763fcaac89c8cdf480ea7662f514993d48ca6&amp;"
-                alt="Logo Eiiris"
-                loading="lazy"
-            >
-
-            <span>Developed by Eiiris | vodka.idk</span>
-        </footer>
-
-    </main>
-
-    <script>
-        /*
-         * Código do convite:
-         * https://discord.gg/7kEktfWFEv
-         */
-        const INVITE_CODE = "7kEktfWFEv";
-
-        /*
-         * Intervalo de atualização:
-         * 120000 milissegundos = 2 minutos.
-         */
-        const UPDATE_INTERVAL = 120000;
-
-        const memberCountElement =
-            document.getElementById("member-count");
-
-        function formatNumber(number) {
-            return Number(number).toLocaleString("pt-BR");
-        }
-
-        async function updateDiscordMembers() {
-            if (!memberCountElement) {
-                return;
-            }
-
-            try {
-                const endpoint =
-                    `https://discord.com/api/v10/invites/` +
-                    `${encodeURIComponent(INVITE_CODE)}` +
-                    `?with_counts=true&with_expiration=true`;
-
-                const response = await fetch(endpoint, {
-                    method: "GET",
-                    cache: "no-store",
-                    headers: {
-                        "Accept": "application/json"
-                    }
-                });
-
-                if (!response.ok) {
-                    throw new Error(
-                        `Discord respondeu com o status ${response.status}`
-                    );
-                }
-
-                const data = await response.json();
-
-                const totalMembers =
-                    data.approximate_member_count;
-
-                const onlineMembers =
-                    data.approximate_presence_count;
-
-                if (
-                    typeof totalMembers !== "number" ||
-                    typeof onlineMembers !== "number"
-                ) {
-                    throw new Error(
-                        "A quantidade de membros não foi retornada."
-                    );
-                }
-
-                memberCountElement.textContent =
-                    `${formatNumber(totalMembers)} membros • ` +
-                    `${formatNumber(onlineMembers)} online`;
-
-                memberCountElement.classList.remove("loading");
-
-            } catch (error) {
-                console.error(
-                    "Não foi possível atualizar os membros:",
-                    error
-                );
-
-                memberCountElement.textContent =
-                    "Entre na nossa comunidade";
-
-                memberCountElement.classList.remove("loading");
-            }
-        }
-
-        updateDiscordMembers();
-
-        setInterval(
-            updateDiscordMembers,
-            UPDATE_INTERVAL
-        );
-    </script>
 </body>
 </html>
